@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -13,8 +14,9 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import OutlinedInput from '@mui/material/OutlinedInput';
 
-const Login = () => {
-  
+import * as action from '../../store/auth/actions';
+
+const Login = ({authenticate}) => {  
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -39,6 +41,9 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    console.log(process.env.NODE_ENV)
+    const { email, password } = values;
+    (email && password) && authenticate({email, password});
   }
 
   return (
@@ -129,4 +134,8 @@ const Login = () => {
   )
 }
 
-export default Login;
+const mapDispatch = (dispatch) => ({
+  authenticate: (payload) => dispatch(action.login(payload)),
+});
+
+export default connect(null, mapDispatch)(Login);

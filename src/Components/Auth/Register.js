@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import {connect} from 'react-redux';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -15,8 +16,9 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
+import * as action from '../../store/auth/actions';
 
-const Register = () => {
+const Register = ({register}) => {
   
   const [ values, setValues ] = useState({
     fullname: '',
@@ -44,6 +46,8 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    const { fullname, email, password, sex } = values;
+    (fullname && email && password && sex) && register({fullname, email, password, sex})
   }
 
   return (
@@ -155,4 +159,8 @@ const Register = () => {
   )
 }
 
-export default Register;
+const mapDispatch = (dispatch) => ({
+  register: (payload) => dispatch(action.signup(payload)),
+})
+
+export default connect(null, mapDispatch)(Register);
