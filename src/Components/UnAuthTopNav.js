@@ -5,6 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link as RLink } from 'react-router-dom';
+import Link from '@mui/material/Link';
 
 const UnAuthTopNav = () => {
   return (
@@ -19,8 +20,8 @@ const UnAuthTopNav = () => {
         </Typography>
         <div>
           <Typography
-            component={RLink}
-            to="https://github.com/chiorji"
+            component={Link}
+            href="https://github.com/chiorji"
             target="_blank"
             rel="noopener noreferrer"
             sx={{

@@ -1,13 +1,15 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+
 import PrivateRoute from './Auth/PrivateRoute';
 import Landing from '../Pages/Landing';
+import Client from '../Pages/Client';
 
 const App = () => {
   return (
-    <>
-      <PrivateRoute to='/dashboard' component={()=> <h2>Dashboard</h2>}/>
+    <Switch>
+      <PrivateRoute path='/dashboard' component={Client}/>
       <Route path="/" component={Landing} />
-    </>
+    </Switch>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Layout from '../Components/UnAuthLayout';
 import Home from '../Components/Home';
@@ -13,6 +13,7 @@ const Landing = () => {
         <Route path="/" exact component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Register} />
+        <Redirect from="/*" to="/" />
       </Switch>
     </Layout>
   )
