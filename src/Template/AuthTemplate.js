@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ClientAuthTopNav from './ClientAuthTopNav';
+import ClientAuthTopNav from '../Components/ClientAuthTopNav';
 
-const ClientAuthLayout = ({children}) => {
+const AuthTemplate = ({children}) => {
   return (
     <>
       <ClientAuthTopNav />
@@ -12,8 +12,8 @@ const ClientAuthLayout = ({children}) => {
   )
 }
 
-ClientAuthLayout.propTypes = {
+AuthTemplate.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default ClientAuthLayout;
+export default AuthTemplate;

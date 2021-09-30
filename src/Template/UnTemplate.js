@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import UnAuthTopNav from './UnAuthTopNav';
+import UnAuthTopNav from '../Components/UnAuthTopNav';
 
-const UnAuthLayout = ({children}) => {
+const UnTemplate = ({children}) => {
   return (
     <>
       <UnAuthTopNav />
@@ -12,8 +12,8 @@ const UnAuthLayout = ({children}) => {
   )
 }
 
-UnAuthLayout.propTypes = {
+UnTemplate.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default UnAuthLayout;
+export default UnTemplate;
