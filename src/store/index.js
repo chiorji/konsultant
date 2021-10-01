@@ -46,6 +46,7 @@ const configureStore = () => {
     saveState({
       auth: {
         ...store.getState().auth,
+        fullname:        store.getState().auth.fullname,
         isLoggedIn:      store.getState().auth.isLoggedIn,
         email:           store.getState().auth.email,
         token:           store.getState().auth.token,

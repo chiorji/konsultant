@@ -12,7 +12,7 @@ function* login({ payload }) {
     // yield put(action.loginSuccess(data))
     yield put(action.loginSuccess({
       email: 'test@dom.co',
-      fullname: 'test',
+      fullname: 'Test Account',
       token: 'test'
     }));
     yield put(push('/dashboard'))
