@@ -1,6 +1,3 @@
-// import fs from 'fs';
-// import path from 'path';
-// import faker from 'faker/locale/es';
 const fs = require('fs');
 const path = require('path');
 const faker = require('faker/locale/es');
@@ -26,7 +23,7 @@ let schedules = [
   }
 ];
 
-for (let i = 2; i <= 10; i++) {
+for (let i = 2; i <= 50; i++) {
   const firstName = faker.name.firstName();
   const lastName = faker.name.lastName();
   clients.push({

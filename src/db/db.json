@@ -449,6 +449,15 @@
       "email": "Lola_Sedillo@gmail.com",
       "id": 50,
       "password": "odYBNi06ZvkiQcy"
+    },
+    {
+      "fullname": "Victor Oman",
+      "email": "vick@domain.com",
+      "password": "test",
+      "gender": "Male",
+      "id": 1633117647490,
+      "token": "7f830677-5ce9-4c43-9f05-eb6a478deb17",
+      "avatar": "https://cdn.fakercloud.com/avatars/mizko_128.jpg"
     }
   ],
   "schedules": [
@@ -801,6 +810,13 @@
       "description": "Eum laboriosam consequatur est dolorum. Id praesentium rerum aut hic ducimus eos. Ut quia alias culpa vitae rerum corporis sit numquam natus. Et repudiandae id modi culpa neque.",
       "clientId": 50,
       "id": 50
+    },
+    {
+      "date": "Fri, 01 Oct 2021 19:51:30 GMT",
+      "title": "Title",
+      "description": "Some title description",
+      "clientId": 1633117647490,
+      "id": 60610
     }
   ]
 }
