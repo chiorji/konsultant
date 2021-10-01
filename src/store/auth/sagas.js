@@ -1,21 +1,20 @@
-import { call, put, takeLatest, /*takeEvery*/ } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { push } from 'connected-react-router';
+import  * as faker from 'faker/locale/es';
 
 import types from './actionTypes';
 import * as action from './actions';
 import req from '../../services/request';
 import endp from '../../services/endpoints';
 
+
 function* login({ payload }) {
   try {
-    // const { data } = yield call(req.auth, endp.login(payload));
-    // yield put(action.loginSuccess(data))
-    yield put(action.loginSuccess({
-      email: 'test@dom.co',
-      fullname: 'Test Account',
-      token: 'test'
-    }));
-    yield put(push('/dashboard'))
+    const { data } = yield call(req.get, endp.login(payload));
+    if (data[ 0 ]) {
+      yield put(action.loginSuccess(data[0]))
+      yield put(push('/dashboard'))
+    }
   } catch (e) {
     console.log(e);
   }
@@ -23,13 +22,16 @@ function* login({ payload }) {
 
 function* signup({ payload }) {
   try {
-    yield call(req.auth, endp.signup(payload));
-    // If sign up was successful, automatically request login
-    const {data} = yield call(req.auth(endp.login({
-      email: payload.email,
-      password: payload.password
-    })));
-    yield put(action.loginSuccess(data))
+    const {data} = yield call(req.auth, endp.signup({
+      ...payload,
+      id: Date.now(),
+      token: faker.datatype.uuid(),
+      avatar: faker.internet.avatar()
+    }));
+    // If sign up was successful, automatically send to login page
+    if (data) {
+      yield put(push('/login'))
+    }
   } catch (e) {
     console.log(e);
   }

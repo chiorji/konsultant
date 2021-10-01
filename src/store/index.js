@@ -50,7 +50,9 @@ const configureStore = () => {
         isLoggedIn:      store.getState().auth.isLoggedIn,
         email:           store.getState().auth.email,
         token:           store.getState().auth.token,
-        role:            store.getState().auth.role,
+        role: store.getState().auth.role,
+        id: store.getState().auth.id,
+        avatar:           store.getState().auth.avatar,
       },
     });
   }, 2000));

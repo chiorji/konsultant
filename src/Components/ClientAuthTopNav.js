@@ -9,7 +9,7 @@ import { Link as RLink } from 'react-router-dom';
 
 import * as action from '../store/auth/actions';
 
-const ClientAuthTopNav = ({logout, fullname}) => {
+const ClientAuthTopNav = ({logout, fullname, avatar}) => {
   return (
     <AppBar position="fixed" elevation={0} sx={{bgcolor: 'primary.dark'}}>
       <Container sx={{ display: 'flex', py: 2 }}>
@@ -19,24 +19,23 @@ const ClientAuthTopNav = ({logout, fullname}) => {
           justifyContent: 'flex-start',
           alignItems: 'center',
         }}>
-          <Typography
-          variant="h6"
-          component="h5"
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            alignItems: 'center',
-            fontWeight: 'bold',
-            height: '40px',
-            width: '40px',
-            borderRadius: '50%',
-            bgcolor: '#fff',
-            color: 'primary.dark',
-            mr: 2
-          }}>
-        {fullname.slice(0, 2).toUpperCase()}
-        </Typography>
+          <Box
+            component="img"
+            src={avatar} 
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center',
+              fontWeight: 'bold',
+              height: '40px',
+              width: '40px',
+              borderRadius: '50%',
+              bgcolor: '#fff',
+              color: 'primary.dark',
+              mr: 2
+            }}>
+        </Box>
         <Typography
           variant="h5"
           component={RLink}
@@ -51,6 +50,11 @@ const ClientAuthTopNav = ({logout, fullname}) => {
           alignItems: 'center',
           justifyContent: 'flex-end',
         }}>
+          <Typography
+            component={RLink}
+            to='/dashboard'
+            sx={{mr: 3, color: '#fff', textDecoration: 'none'}}
+          >Home</Typography>
           <Typography
             component={RLink}
             to='/dashboard/ap/book'
@@ -79,7 +83,8 @@ const mapDispatch = (dispatch) => ({
 })
 
 const mapState = ({auth}) => ({
-  fullname: auth.fullname
+  fullname: auth.fullname,
+  avatar: auth.avatar,
 })
 
 export default connect(mapState, mapDispatch)(ClientAuthTopNav);

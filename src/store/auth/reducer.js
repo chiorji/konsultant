@@ -5,7 +5,9 @@ const initialState = {
   fullname: '',
   email:   null,
   token:  null,
-  role:   'USER'
+  role: 'USER',
+  id: null,
+  avatar: null,
 }
 
 const authReducer = (state = initialState, action) => {

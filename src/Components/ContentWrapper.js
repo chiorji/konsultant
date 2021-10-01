@@ -6,9 +6,9 @@ const ContentWrapper = ({children}) => {
     <Container sx={{
       minHeight: { xs: '400px', md: '600px' },
       position: 'relative',
-      // border: '1px solid red',
-      mt: {md: 10},
-      py: 2
+      mt: {xs: 15, md: 15},
+      py: 2,
+      mb: 5
     }}>
     {children}
     </Container>

@@ -1,17 +1,29 @@
 /* eslint-disable import/no-anonymous-default-export */
-let BASE_PATH = process.env.REACT_APP_BASE_PATH_LOC;
-if (process.env.NODE_ENV === 'production') {
-  BASE_PATH = process.env.REACT_APP_BASE_PATH;
-}
+let BASE_PATH = 'http://localhost:3001';
+// if (process.env.NODE_ENV === 'production') {
+//   BASE_PATH = process.env.REACT_APP_BASE_PATH;
+// }
 
 export default {
-  login: (data) => ({
-    url: `${BASE_PATH}/auth/login`,
-    data
+  login: ({email, password}) => ({
+    url: `${BASE_PATH}/clients?email=${email}&password=${password}`,
   }),
 
   signup: (data) => ({
-    url: `${BASE_PATH}/auth/signup`,
+    url: `${BASE_PATH}/clients`,
     data
+  }),
+
+  schedule: (data) => ({
+    url: `${BASE_PATH}/schedules`,
+    data
+  }),
+
+  getSchedules: (data) => ({
+    url: `${BASE_PATH}/schedules?clientId=${data}`,
+  }),
+
+  cancelSchedule: (data) => ({
+    url: `${BASE_PATH}/schedules/${data}`
   })
 }

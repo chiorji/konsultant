@@ -24,7 +24,7 @@ const Register = ({register}) => {
     fullname: '',
     email: '',
     password: '',
-    sex: '', 
+    gender: '', 
     showPassword: false,
   });
 
@@ -46,8 +46,8 @@ const Register = ({register}) => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    const { fullname, email, password, sex } = values;
-    (fullname && email && password && sex) && register({fullname, email, password, sex})
+    const { fullname, email, password, gender } = values;
+    (fullname && email && password && gender) && register({fullname, email, password, gender})
   }
 
   return (
@@ -116,13 +116,13 @@ const Register = ({register}) => {
             />
             </FormControl>
             <FormControl fullWidth sx={{ m: 1 }}>
-        <InputLabel id="sex">Sex</InputLabel>
+        <InputLabel id="gender">Gender</InputLabel>
         <Select
-          labelId="sex"
-          id="sex"
-          value={values.sex}
-          label="Sex"
-          onChange={handleChange('sex')}
+          labelId="gender"
+          id="gender"
+          value={values.gender}
+          label="Gender"
+          onChange={handleChange('gender')}
         >
           <MenuItem value="Female">Female</MenuItem>
           <MenuItem value="Male">Male</MenuItem>

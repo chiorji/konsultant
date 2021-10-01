@@ -72,9 +72,9 @@ request.put = (options, withToken = true) => {
   return request.make(options, withToken)
 }
 
-request.delete = (options) => {
+request.delete = (options, withToken = true) => {
   options.method = 'DELETE'
-  return request.make(options, true)
+  return request.make(options, withToken)
 }
 
 request.cancel = (reason = 'Ooops! request was aborted.') => {
