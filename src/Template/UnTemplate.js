@@ -12,6 +12,15 @@ const UnTemplate = ({children}) => {
   )
 }
 
+export const UnTempOthers = ({ children }) => {
+  return (
+    <>
+      <UnAuthTopNav color="primary.light" textColor="#fff" />
+      {children}
+    </>
+  )
+}
+
 UnTemplate.propTypes = {
   children: PropTypes.node.isRequired
 }
