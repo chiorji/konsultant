@@ -43,7 +43,7 @@ const Dashboard = ({auth}) => {
           minWidth: {xs: '100%', md: '500px'}
         }}>
           <LinkButton label="Schedule A Meeting" color="#fff"  slug="book"/>
-          <LinkButton label="My Calendar"  variant="outlined" slug="all" />
+          <LinkButton label="My Calendar"  variant="outlined" slug="all" radius />
         </Box>
       </Box>
     </ContentWrapper>
@@ -62,7 +62,8 @@ function LinkButton(props) {
         color: props.color,
         bgcolor: props.bgcolor,
         p: 2,
-        minWidth: {md: '220px'}
+        minWidth: { md: '220px' },
+        borderRadius: props.radius ? '50px' : 'none',
       }}
      >
       {props.label}
