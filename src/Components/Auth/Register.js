@@ -148,7 +148,7 @@ const Register = ({register}) => {
               <Typography
               variant="p"
               component={Link}
-              to="/login"
+              to="/k/login"
               sx={{fontSize: '14px', color: 'primary.main'}}
             >Already have an account, login</Typography>
             </Box>

@@ -117,13 +117,13 @@ const Login = ({authenticate}) => {
               <Typography
               variant="p"
               component={Link}
-              to="/signup"
+              to="/k/signup"
               sx={{fontSize: '14px', color: 'primary.main'}}
             >New to Konsultant, Sign up</Typography>
             <Typography
               variant="p"
               component={Link}
-              to="/signup"
+              to="/k/signup"
               sx={{fontSize: '14px', color: 'primary.main'}}
             >Forgot password?</Typography>
             </Box>

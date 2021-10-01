@@ -59,7 +59,7 @@ const Home = () => {
             >Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui vel obcaecati atque exercitationem distinctio aliquid natus dolorum eum, mollitia adipisci iste inventore perspiciatis maxime quaerat molestias recusandae magnam eos.</Typography>
           <Button
             component={RLink}
-            to="/login"
+            to="/k/login"
             sx={{
               borderRadius: '50px',
               mt: 5,
