@@ -30,7 +30,7 @@ function* signup({ payload }) {
     }));
     // If sign up was successful, automatically send to login page
     if (data) {
-      yield put(push('/login'))
+      yield put(push('/k/login'))
     }
   } catch (e) {
     console.log(e);
