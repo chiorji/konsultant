@@ -9,10 +9,18 @@ import endp from '../../services/endpoints';
 
 
 function* login({ payload }) {
+    let user = Object.create(null);
   try {
     const { data } = yield call(req.get, endp.login(payload));
-    if (data[ 0 ]) {
-      yield put(action.loginSuccess(data[0]))
+    if (data instanceof Array) {
+      user = {...data[0]}
+    } else {
+      user = Object.assign({}, data)
+    }
+    yield put(action.loginSuccess(user))
+    if (user.role && user.role === 'ADMIN') {
+      yield put(push('/ad/admin'))
+    } else {
       yield put(push('/dashboard'))
     }
   } catch (e) {

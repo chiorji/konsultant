@@ -12,7 +12,20 @@ const AuthTemplate = ({children}) => {
   )
 }
 
+export const AdminTemp = ({children}) => {
+  return (
+    <>
+      <ClientAuthTopNav />
+      {children}
+    </>
+  )
+}
+
 AuthTemplate.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+AdminTemp.propTypes = {
   children: PropTypes.node.isRequired
 }
 

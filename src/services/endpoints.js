@@ -25,5 +25,9 @@ export default {
 
   cancelSchedule: (data) => ({
     url: `${BASE_PATH}/schedules/${data}`
+  }),
+
+  getUsers: (data) => ({
+    url: `${BASE_PATH}/clients`
   })
 }

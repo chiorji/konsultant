@@ -5,9 +5,12 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Template from '../Template/UnTemplate';
 import Home from '../Components/Home';
 
-const Landing = ({loggedIn}) => {
+const Landing = ({loggedIn, role}) => {
   return (
-    loggedIn ? <Redirect to='/dashboard' /> :
+      (loggedIn && role === 'USER')
+      ? <Redirect to='/dashboard' />
+      :   (loggedIn && role === 'ADMIN')
+      ? <Redirect to='/ad/admin' /> :
     <Template>
       <Switch>
         <Route path="/" exact component={Home} />
@@ -18,7 +21,8 @@ const Landing = ({loggedIn}) => {
 }
 
 const mapState = ({ auth }) => ({
-  loggedIn: auth.isLoggedIn
+  loggedIn: auth.isLoggedIn,
+  role: auth.role,
 })
 
 export default connect(mapState)(Landing);

@@ -11,6 +11,15 @@ let clients = [ {
     email: 'test@domain.com',
     id: 1,
     password: 'test',
+}, {
+    gender: 'male',
+    token: faker.datatype.uuid(),
+    avatar: faker.internet.avatar(),
+    fullname: 'admin account',
+    email: 'admin@domain.com',
+    id: 2,
+    password: 'admin',
+    role: 'ADMIN'
 } ];
 
 let schedules = [
@@ -23,7 +32,7 @@ let schedules = [
   }
 ];
 
-for (let i = 2; i <= 50; i++) {
+for (let i = 3; i <= 50; i++) {
   const firstName = faker.name.firstName();
   const lastName = faker.name.lastName();
   clients.push({

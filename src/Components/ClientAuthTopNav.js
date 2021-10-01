@@ -9,7 +9,7 @@ import { Link as RLink } from 'react-router-dom';
 
 import * as action from '../store/auth/actions';
 
-const ClientAuthTopNav = ({logout, fullname, avatar}) => {
+const ClientAuthTopNav = ({logout, fullname, avatar, role}) => {
   return (
     <AppBar position="fixed" elevation={0} sx={{bgcolor: 'primary.dark'}}>
       <Container sx={{ display: 'flex', py: 2 }}>
@@ -50,7 +50,8 @@ const ClientAuthTopNav = ({logout, fullname, avatar}) => {
           alignItems: 'center',
           justifyContent: 'flex-end',
         }}>
-          <Typography
+          {role !== 'ADMIN' && <>
+            <Typography
             component={RLink}
             to='/dashboard'
             sx={{mr: 3, color: '#fff', textDecoration: 'none'}}
@@ -65,6 +66,19 @@ const ClientAuthTopNav = ({logout, fullname, avatar}) => {
             to='/dashboard/ap/all'
             sx={{mr: 3, color: '#fff', textDecoration: 'none'}}
           >My Calendar</Typography>
+          </>}
+          {role === 'ADMIN' && <>
+                <Typography
+            component={RLink}
+            to='/ad/admin/users'
+            sx={{mr: 3, color: '#fff', textDecoration: 'none'}}
+          >Users</Typography>
+          <Typography
+            component={RLink}
+            to='/ad/admin/aps'
+            sx={{mr: 3, color: '#fff', textDecoration: 'none'}}
+          >Appointments</Typography>
+          </>}
           <Button
             size="medium"
             variant="contained"
@@ -85,6 +99,7 @@ const mapDispatch = (dispatch) => ({
 const mapState = ({auth}) => ({
   fullname: auth.fullname,
   avatar: auth.avatar,
+  role: auth.role,
 })
 
 export default connect(mapState, mapDispatch)(ClientAuthTopNav);
