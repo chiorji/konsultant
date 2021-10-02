@@ -29,5 +29,9 @@ export default {
 
   getUsers: (data) => ({
     url: `${BASE_PATH}/clients?_page=1&_limit=10`
+  }),
+
+  listSchedules: () => ({
+    url: `${BASE_PATH}/schedules`
   })
 }

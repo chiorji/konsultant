@@ -454,13 +454,6 @@
   ],
   "schedules": [
     {
-      "id": 95573,
-      "clientId": 1,
-      "date": "Sun, 30 May 1999 04:44:02 GMT",
-      "title": "explicabo enim laboriosam",
-      "description": "Sint nulla quia eligendi in consequuntur debitis. Eos enim repellendus ad. Doloremque eos soluta eos molestiae."
-    },
-    {
       "date": "Fri, 14 Feb 2042 15:19:43 GMT",
       "title": "ipsum vero aut",
       "description": "Perspiciatis aperiam rerum. Quae animi in veniam et. Molestiae adipisci ut non sed dolore repudiandae qui ex. Sit tempore saepe et odio cum ea magni.",
@@ -473,13 +466,6 @@
       "description": "Illum itaque suscipit. Quia non quisquam quibusdam voluptatem voluptates. Assumenda maxime vero ea et omnis dolores.",
       "clientId": 4,
       "id": 4
-    },
-    {
-      "date": "Thu, 15 Jan 2065 19:01:17 GMT",
-      "title": "consequatur saepe inventore",
-      "description": "Ipsa eum quis sunt dolores. Fugiat distinctio iste. Nisi voluptatem eius animi aut perferendis ab et provident voluptatum.",
-      "clientId": 5,
-      "id": 5
     },
     {
       "date": "Wed, 10 Jan 2024 11:28:11 GMT",
@@ -734,13 +720,6 @@
       "id": 41
     },
     {
-      "date": "Fri, 30 Sep 2033 17:02:38 GMT",
-      "title": "aliquam sed est",
-      "description": "Aliquid excepturi sint expedita officia voluptatem. Necessitatibus ad reiciendis fugit voluptas dicta et sunt vel. Placeat fuga impedit earum quod et modi nisi ipsam. Aut totam dolores aut aut.",
-      "clientId": 42,
-      "id": 42
-    },
-    {
       "date": "Sat, 20 Mar 2094 05:36:41 GMT",
       "title": "perferendis molestias nam",
       "description": "Ipsum repellendus consequuntur blanditiis recusandae voluptatem autem. Ducimus perspiciatis error corrupti odio esse unde enim praesentium. Nisi eum et est temporibus atque omnis placeat. Doloremque rerum illo ut. Fugit quos aperiam eos quaerat autem alias veniam saepe. Consequatur error ut.",
@@ -753,48 +732,6 @@
       "description": "Repellendus necessitatibus ut fugiat necessitatibus quia rem. Vitae dicta ducimus dolorem. Quia vel fugiat ipsam sit. Consequuntur sit sed tempore tempore magnam voluptas voluptatum. Molestiae in ea magnam illo. Quo aut voluptas error quia molestias illo.",
       "clientId": 44,
       "id": 44
-    },
-    {
-      "date": "Thu, 29 Aug 2052 08:33:26 GMT",
-      "title": "temporibus aut vel",
-      "description": "Voluptatem quod nostrum dolores autem laborum veniam explicabo. Dolores voluptate omnis. Voluptates et est quae facere exercitationem.",
-      "clientId": 45,
-      "id": 45
-    },
-    {
-      "date": "Sat, 03 Dec 2011 08:44:07 GMT",
-      "title": "eum omnis quis",
-      "description": "Debitis deserunt suscipit earum ut voluptatum. Et ipsum porro corrupti asperiores eum ex itaque. Eius at quia delectus perspiciatis. Ut qui veniam tempora reiciendis quasi quis exercitationem. Quam et sed autem ipsum delectus quisquam.",
-      "clientId": 46,
-      "id": 46
-    },
-    {
-      "date": "Fri, 25 Aug 2056 15:11:14 GMT",
-      "title": "eaque qui praesentium",
-      "description": "Reprehenderit deleniti dolorem voluptas explicabo placeat nam cumque. Enim blanditiis odit nobis. Asperiores vel voluptas accusamus rem.",
-      "clientId": 47,
-      "id": 47
-    },
-    {
-      "date": "Mon, 10 Mar 2042 20:07:39 GMT",
-      "title": "quam omnis molestiae",
-      "description": "Corporis consequatur cumque minus praesentium voluptatem maxime. Nihil minus sed quidem sit aliquam doloremque. Rerum voluptates aut culpa tempore dignissimos et rerum.",
-      "clientId": 48,
-      "id": 48
-    },
-    {
-      "date": "Fri, 03 Apr 2020 20:22:14 GMT",
-      "title": "tenetur nisi dignissimos",
-      "description": "Vel eum quasi optio tempore. Quaerat laudantium ea tenetur quod consequuntur. Consequatur ut rerum. Quis at omnis quos in error mollitia itaque.",
-      "clientId": 49,
-      "id": 49
-    },
-    {
-      "date": "Wed, 28 Oct 2020 09:48:35 GMT",
-      "title": "vel quia nihil",
-      "description": "Mollitia sint laborum sit voluptas explicabo adipisci laudantium laudantium totam. Veniam asperiores qui repudiandae accusamus. Rem nisi quia et et nam repellendus nulla qui. Voluptas ad non.",
-      "clientId": 50,
-      "id": 50
     }
   ]
 }

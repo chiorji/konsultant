@@ -4,6 +4,7 @@ const initialState = {
   users: [],
   links: [],
   totalUsers: null,
+  schedules: [],
 }
 
 const konsultantReducer = (state = initialState, action) => {
@@ -14,6 +15,18 @@ const konsultantReducer = (state = initialState, action) => {
         totalUsers: action.payload.count,
         users: action.payload.users,
         links: action.payload.links,
+      }
+    
+    case types.K_GET_SCHEDULES_SUCCESS:
+      return {
+        ...state,
+        schedules: action.payload
+      }
+    
+    case types.K_CANCEL_SCHEDULE_SUCCESS:
+      return {
+        ...state,
+        schedules: state.schedules.filter(i => i.id !== action.payload)
       }
     
     default:

@@ -2,5 +2,9 @@ import KeyMirror from 'key-mirror';
 
 export default KeyMirror({
   GET_USERS: null,
-  GET_USERS_SUCCESS: null
+  GET_USERS_SUCCESS: null,
+  K_GET_SCHEDULES: null,
+  K_GET_SCHEDULES_SUCCESS: null,
+  K_CANCEL_SCHEDULE: null,
+  K_CANCEL_SCHEDULE_SUCCESS: null,
 })

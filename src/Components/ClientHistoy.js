@@ -47,7 +47,7 @@ const ClientHistoy = ({id, getSchedules, schedules, cancelSchedule}) => {
   )
 }
 
-function MeetingCard(item) {
+export function MeetingCard(item) {
   return (
     <Box key={item.id} sx={{
       display: 'flex',

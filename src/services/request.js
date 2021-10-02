@@ -80,7 +80,7 @@ request.delete = (options, withToken = true) => {
 request.cancel = (reason = 'Ooops! request was aborted.') => {
   if (cancel && (reason && /session expired/i.test(reason))) {
     window.sessionStorage.removeItem('state')
-    window.location.href = '/login'
+    window.location.href = '/k/login'
   }
   throw new Error(reason)
 }
