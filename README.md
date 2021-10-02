@@ -7,9 +7,8 @@ A minimal appointment booking system (WIP)
   - Show alert when a user/admin cancels an appointment
 
 - Admin
-  - Style user listing
-  - Style schduled appointments
-  - Connect cancel feature to admin effects
+  - Paginate returned data
+  - Viewing users full profile info
 
 ### Test login credentials
 
