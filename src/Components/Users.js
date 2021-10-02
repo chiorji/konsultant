@@ -23,8 +23,8 @@ const Users = ({ getUsers, users, total, links, deleteUser }) => {
   return (
     <Box>
       <Typography variant="h4" component="h2">
-        {total && total.toString()} Users</Typography>
-        {users && <TablerUserList users={users} />}
+        {users && users.length.toString()} {users && users.length > 1 ? 'Users' : 'User'}</Typography>
+        {users && <TablerUserList users={users} delete={deleteUser}/>}
     </Box>
   )
 }
