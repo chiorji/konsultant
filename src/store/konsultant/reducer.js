@@ -29,6 +29,12 @@ const konsultantReducer = (state = initialState, action) => {
         schedules: state.schedules.filter(i => i.id !== action.payload)
       }
     
+    case types.K_DELETE_USER_SUCCESS:
+      return {
+        ...state,
+        users: state.users.filter(i => i.id !== action.payload)
+      }
+    
     default:
       return state;
   }

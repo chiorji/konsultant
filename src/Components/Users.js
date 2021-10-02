@@ -14,7 +14,7 @@ import { Button } from '@mui/material';
 
 import * as action from '../store/konsultant/actions';
 
-const Users = ({ getUsers, users, total, links }) => {
+const Users = ({ getUsers, users, total, links, deleteUser }) => {
   
   useEffect(() => {
     getUsers()
@@ -68,7 +68,9 @@ function TablerUserList(props) {
                     color: 'warning.light',
                     fontSize: "14px",
                     textTransform: 'none'
-                  }}>Delete User</Button>
+                  }}
+                  onClick={()=> props.delete(user.id)}
+                >Delete User</Button>
               </TableCell>
             </TableRow>
           ))}
@@ -86,7 +88,8 @@ const mapState = ({ konsultant }) => ({
 })
 
 const mapDispatch = (dispatch) => ({
-  getUsers: () => dispatch(action.getUsers())
+  getUsers: () => dispatch(action.getUsers()),
+  deleteUser: (payload) => dispatch(action.deleteUser(payload))
 })
 
 export default connect(mapState, mapDispatch)(Users);

@@ -18,6 +18,15 @@ function* getUsers() {
   }catch(e){}
 }
 
+function* deleteUser({ payload }) {
+  try {
+    yield call(req.delete, endp.deleteUser(payload), false);
+    yield put(action.deleteUserSuccess(payload))
+  } catch (e) {
+    console.log('@admin delete user: ', e)
+  }
+}
+
 function* getSchedules() {
   try {
     const { data } = yield call(req.get, endp.listSchedules());
@@ -42,4 +51,5 @@ export default function* watcher() {
   yield takeLatest(types.GET_USERS, getUsers);
   yield takeLatest(types.K_GET_SCHEDULES, getSchedules)
   yield takeLatest(types.K_CANCEL_SCHEDULE, cancelSchedule)
+  yield takeLatest(types.K_DELETE_USER, deleteUser)
 }

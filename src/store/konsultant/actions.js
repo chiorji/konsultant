@@ -9,6 +9,16 @@ export const getUsersSuccess = (payload) => ({
   payload
 })
 
+export const deleteUser = (payload) => ({
+  type: types.K_DELETE_USER,
+  payload
+})
+
+export const deleteUserSuccess = (payload) => ({
+  type: types.K_DELETE_USER_SUCCESS,
+  payload
+})
+
 export const getSchedules = () => ({
   type: types.K_GET_SCHEDULES,
 })

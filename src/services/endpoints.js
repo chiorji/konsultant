@@ -39,5 +39,9 @@ export default {
   // Without pagination
   listUsers: () => ({
     url: `${BASE_PATH}/clients`
+  }),
+
+  deleteUser: (id) => ({
+    url: `${BASE_PATH}/clients/${id}`
   })
 }
