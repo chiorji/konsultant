@@ -27,11 +27,17 @@ export default {
     url: `${BASE_PATH}/schedules/${data}`
   }),
 
+  // TODO: Implements pagination
   getUsers: (data) => ({
     url: `${BASE_PATH}/clients?_page=1&_limit=10`
   }),
 
   listSchedules: () => ({
     url: `${BASE_PATH}/schedules`
+  }),
+
+  // Without pagination
+  listUsers: () => ({
+    url: `${BASE_PATH}/clients`
   })
 }
