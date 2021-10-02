@@ -2,6 +2,8 @@ import types from './actionTypes';
 
 const initialState = {
   users: [],
+  links: [],
+  totalUsers: null,
 }
 
 const konsultantReducer = (state = initialState, action) => {
@@ -9,7 +11,9 @@ const konsultantReducer = (state = initialState, action) => {
     case types.GET_USERS_SUCCESS:
       return {
         ...state,
-        users: action.payload
+        totalUsers: action.payload.count,
+        users: action.payload.users,
+        links: action.payload.links,
       }
     
     default:

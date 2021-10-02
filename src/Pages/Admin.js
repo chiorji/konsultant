@@ -14,6 +14,7 @@ const Admin = () => {
         <Switch>
           <Route path={`${match.path}/users`} exact component={Users} />
           <Route path={`${match.path}/aps`} exact component={Appointments} />
+          <Redirect from={`${match.path}`} to="/ad/admin/users" />
           <Redirect from="/ad/admin/*" to="/ad/admin/users" />
       </Switch>
       </ContentWrapper>

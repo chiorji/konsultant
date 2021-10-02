@@ -7,9 +7,14 @@ import endp from '../../services/endpoints';
 
 function* getUsers() {
   try{
-    const { data } = yield call(req.get, endp.getUsers())
+    const data = yield call(req.get, endp.getUsers())
+    console.log({data})
     if (data) {
-      yield put(action.getUsersSuccess(data))
+      yield put(action.getUsersSuccess({
+        users: data.data,
+        count: data.headers[ 'x-total-count' ],
+        links: data.headers['link'].split(',')
+      }))
     }
   }catch(e){}
 }
