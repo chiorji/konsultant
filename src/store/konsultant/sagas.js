@@ -10,7 +10,8 @@ function* getUsers() {
     const data = yield call(req.get, endp.listUsers())
     if (data) {
       yield put(action.getUsersSuccess({
-        users: data.data,
+        // Remove admin user from returned data
+        users: data.data.filter(i => !i.role),
         count: data.data.length, //data.headers[ 'x-total-count' ],
         links: '' // data.headers['link'].split(',')
       }))
