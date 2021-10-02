@@ -10,3 +10,13 @@ A minimal appointment booking system (WIP)
   - Style user listing
   - Style schduled appointments
   - Connect cancel feature to admin effects
+
+### Test login credentials
+
+- Admin
+  - Email: `admin@domain.com`
+  - Password: `admin`
+
+- Client
+  - Email: `test@domain.com`
+  - Password: `test`
