@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 let BASE_PATH =  'http://localhost:3001' //process.env.PORT || 3001;
 if (process.env.NODE_ENV === 'production') {
-  BASE_PATH = 'https://kkserver.herokuapp.com/'
+  BASE_PATH = 'https://kkserver.herokuapp.com'
 }
 
 export default {
