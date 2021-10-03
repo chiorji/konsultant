@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
-let BASE_PATH = '/api' //process.env.PORT || 3001;
-// if (process.env.NODE_ENV === 'production') {
-//   BASE_PATH = process.env.REACT_APP_BASE_PATH;
-// }
+let BASE_PATH =  'http://localhost:3001' //process.env.PORT || 3001;
+if (process.env.NODE_ENV === 'production') {
+  BASE_PATH = 'https://kkserver.herokuapp.com/'
+}
 
 export default {
   login: ({email, password}) => ({

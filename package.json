@@ -14,9 +14,11 @@
     "axios": "^0.21.1",
     "concurrently": "^6.2.2",
     "connected-react-router": "^6.9.1",
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "date-fns": "^2.24.0",
     "dotenv": "^9.0.2",
+    "express": "^4.17.1",
     "form-urlencoded": "^6.0.4",
     "history": "4.10.1",
     "http-proxy-middleware": "^2.0.1",
@@ -35,7 +37,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"json-server --watch src/db/db.json --routes routes.json --port 3001\"",
+    "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -64,5 +66,9 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6"
   },
-  "proxy": "http://localhost:3001"
+  "engines": {
+    "node": "14.17.5",
+    "npm": "7.22.0",
+    "yarn": "1.22.5"
+  }
 }
